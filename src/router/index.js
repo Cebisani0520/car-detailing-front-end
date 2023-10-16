@@ -17,6 +17,10 @@ const router = createRouter({
       // ]
 
     },
+    {
+      path: 
+    },
+
   ]
 })
 
