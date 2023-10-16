@@ -22,7 +22,7 @@ export default {
       <span v-else>Car Detailing</span>
     </h1>
 
-    <SidebarLink to="/" class="bi bi-columns-gap">Dashboard</SidebarLink>
+    <SidebarLink to="/dashboard" class="bi bi-columns-gap">Dashboard</SidebarLink>
     <SidebarLink to="/services" class="bi bi-gear-wide-connected">Services</SidebarLink>
     <SidebarLink to="/bookings" class="bi bi-calendar3">Bookings</SidebarLink>
     <SidebarLink to="/user" class="bi bi-person-gear">User</SidebarLink>

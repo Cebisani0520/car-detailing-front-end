@@ -7,19 +7,32 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: ()=> import('../views/HomePage.vue'),
-      // redirect: '/dashboard',
-      // children: [
-      //   {
-      //     name: 'dashboard',
-      //     path: '/dashboard',
-      //     component: ()=> import('../views/Dashboard.vue'),
-      //   }
-      // ]
-
     },
     {
-      path: 
+      path: '/dashboard',
+      name: 'dashboard',
+      component: ()=> import('../views/Dashboard.vue'),
     },
+    {
+      path: '/services',
+      name: 'services',
+      component: ()=> import('../views/Services.vue'),
+    },
+    {
+      path: '/bookings',
+      name: 'bookings',
+      component: ()=> import('../views/Bookings.vue'),
+    },
+    {
+      path: '/user',
+      name: 'user',
+      component: ()=> import('../views/User.vue'),
+    },
+    {
+      path: '/employees',
+      name: 'employees',
+      component: ()=> import('../views/Employees.vue'),
+    }
 
   ]
 })
