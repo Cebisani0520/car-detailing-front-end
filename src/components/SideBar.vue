@@ -12,7 +12,7 @@
     <SidebarLink to="/dashboard" class="bi bi-columns-gap">Dashboard</SidebarLink>
     <SidebarLink to="/services" class="bi bi-gear-wide-connected">Services</SidebarLink>
     <SidebarLink to="/bookings" class="bi bi-calendar3">Bookings</SidebarLink>
-    <SidebarLink to="/user" class="bi bi-person-gear">User</SidebarLink>
+    <!-- <SidebarLink to="/user" class="bi bi-person-gear">User</SidebarLink> -->
     <SidebarLink to="/address" class="bi bi-building-fill-add">Addresses</SidebarLink>
     <SidebarLink to="/employees" class="bi bi-person-add">Employees</SidebarLink>
     <SidebarLink to="/" class="bi bi-door-open" @click="handleLogout">Log Out</SidebarLink>

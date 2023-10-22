@@ -4,7 +4,7 @@
     <h2 class="mt-4">Upcoming Events</h2>
     <ul class="list-group">
       <li v-for="event in events" :key="event.id" class="list-group-item">
-        {{ event.customerId }} - {{ formatDate(event.date) }} 
+        <p>Customer</p>{{ event.customerId }}  - {{event.time}}
       </li>
     </ul>
   </div>
