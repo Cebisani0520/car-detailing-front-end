@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div col-md-12>
-                    <h1 class="text-center"> View Residentials</h1>
+                    <h1 class="text-center"> View Addresses</h1>
 
                     <button class="btn btn-primary" @click="openAddModal">Add Residential</button>
 

@@ -1,5 +1,5 @@
 <template>
-  <h1>Welcome Back</h1>
+  <h1>Welcome Back!</h1>
   <SideBar />
   <LoginForm />
 </template>
