@@ -1,5 +1,5 @@
 <template>
- <h2> Home Page </h2>
+ <!-- <h2> Home Page </h2> -->
  <SideBar />
 <LoginForm />
 </template>

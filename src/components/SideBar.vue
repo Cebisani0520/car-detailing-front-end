@@ -9,13 +9,13 @@
       <span v-else>Car Detailing</span>
     </h1>
 
-    <SidebarLink to="/dashboard" class="bi bi-columns-gap">Dashboard</SidebarLink>
-    <SidebarLink to="/services" class="bi bi-gear-wide-connected">Services</SidebarLink>
-    <SidebarLink to="/bookings" class="bi bi-calendar3">Bookings</SidebarLink>
-    <!-- <SidebarLink to="/user" class="bi bi-person-gear">User</SidebarLink> -->
-    <SidebarLink to="/address" class="bi bi-building-fill-add">Addresses</SidebarLink>
-    <SidebarLink to="/employees" class="bi bi-person-add">Employees</SidebarLink>
-    <SidebarLink to="/" class="bi bi-door-open" @click="handleLogout">Log Out</SidebarLink>
+    <SidebarLink to="/dashboard" icon="bi bi-columns-gap">Dashboard</SidebarLink>
+    <SidebarLink to="/services" icon="bi bi-gear-wide-connected">Services</SidebarLink>
+    <SidebarLink to="/bookings" icon="bi bi-calendar3">Bookings</SidebarLink>
+    <!-- <SidebarLink to="/user" icon="bi bi-person-gear">User</SidebarLink> -->
+    <SidebarLink to="/address" icon="bi bi-building-fill-add">Addresses</SidebarLink>
+    <SidebarLink to="/employees" icon="bi bi-person-add">Employees</SidebarLink>
+    <SidebarLink to="/" icon="bi bi-door-open" @click="handleLogout">Log Out</SidebarLink>
 
     <span
       class="bi bi-arrow-left-square"
