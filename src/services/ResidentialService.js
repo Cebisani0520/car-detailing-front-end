@@ -3,17 +3,33 @@ import axios from "axios";
 const RESIDENTIAL_API_BASE_URL = 'http://localhost:8080/residential'
 
 class ResidentialService{
-    createResidential(){
-        return axios.post(RESIDENTIAL_API_BASE_URL + '/create')
+    createResidential(residentialData, accessToken){
+        return axios.post(`${RESIDENTIAL_API_BASE_URL}/create`, residentialData, {
+            headers: {
+                Authorization: `Bearer ${accessToken}`
+            }
+        });
     }
-    getResidentials(){
-        return axios.get(RESIDENTIAL_API_BASE_URL + '/getAll')
+    getResidentials(accessToken){
+        return axios.get(`${RESIDENTIAL_API_BASE_URL}/getAll`, {
+            headers: {
+                Authorization: `Bearer ${accessToken}`
+            }
+        });
     }
-    deleteResidential(){
-        return axios.delete(RESIDENTIAL_API_BASE_URL + '/delete/{id}')
+    async deleteResidential(id, accessToken){
+        return await axios.delete(`${RESIDENTIAL_API_BASE_URL}/delete/${id}`, {
+            headers: {
+                Authorization: `Bearer ${accessToken}`
+            }
+        });
     }
-    updateResidential(){
-        
+    updateResidential(id, data, accessToken){
+        return axios.post(`${RESIDENTIAL_API_BASE_URL}/update/${id}`, data, {
+            headers: {
+                Authorization: `Bearer ${accessToken}`
+            }
+        });  
     }
 
 }

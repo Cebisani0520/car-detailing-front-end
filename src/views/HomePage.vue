@@ -1,26 +1,19 @@
 <template>
-    <div class="w-100 h-100 d-flex">
-      Home Page Here
-    </div>
-    
-  </template>
-  
+ <h2> Home Page </h2>
+ <SideBar />
+<LoginForm />
+</template>
 
 <script>
-import NavBar from '@/components/NavBar.vue';
+import LoginForm from '../components/LoginForm.vue';
 import SideBar from '@/components/SideBar.vue';
-
 export default {
-    components: {NavBar, SideBar},
-    data(){
-        return {openSidebar: true }
-    },
-    methods: {
-    toggleSidebar() {
-      this.openSidebar = !this.openSidebar
-    }
-  }
+  components: {LoginForm, SideBar}
+  
+
 }
 </script>
 
-<style></style>
+<style>
+
+</style>
