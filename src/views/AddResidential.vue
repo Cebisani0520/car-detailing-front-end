@@ -3,7 +3,7 @@
         <NavBar />
         <div class="my-S">
             <div class="mx-auto w-25" style="max-width: 100%">
-                <h2 class="tex-center mb-3"> Add Residential</h2>
+                <h2 class="tex-center mb-3">Add Residential</h2>
                 <form @submit.prevent="addResidential">
                     <!--Street Address-->
                     <div class="row">
@@ -57,9 +57,7 @@
                     </div>
                 </form>
             </div>
-
         </div>
-
 
     </main>
 

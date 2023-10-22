@@ -1,16 +1,3 @@
-<script>
-import SidebarLink from '@/components/SidebarLink.vue';
-import { collapsed, toggleSidebar, sidebarWidth } from './state'
-
-export default {
-  props: {},
-  components: { SidebarLink },
-  setup() {
-    return { collapsed, toggleSidebar, sidebarWidth }
-  }
-}
-</script>
-
 <template>
   <div class="sidebar" :style="{ width: sidebarWidth }">
     <h1>
@@ -26,19 +13,43 @@ export default {
     <SidebarLink to="/services" class="bi bi-gear-wide-connected">Services</SidebarLink>
     <SidebarLink to="/bookings" class="bi bi-calendar3">Bookings</SidebarLink>
     <SidebarLink to="/user" class="bi bi-person-gear">User</SidebarLink>
+    <SidebarLink to="/address" class="bi bi-building-fill-add">Addresses</SidebarLink>
     <SidebarLink to="/employees" class="bi bi-person-add">Employees</SidebarLink>
-    <SidebarLink to="logout" class="bi bi-door-open">Log Out</SidebarLink>
-    <SidebarLink to="about" class="bi bi-question-circle">Help</SidebarLink>
+    <SidebarLink to="/" class="bi bi-door-open" @click="handleLogout">Log Out</SidebarLink>
 
     <span
       class="bi bi-arrow-left-square"
       :class="{ 'rotate-180': collapsed }"
       @click="toggleSidebar">
-      <i class="bi bi-box-arrow-left" />
+      <!-- <i class="bi bi-box-arrow-left" /> -->
     </span>
 
   </div>
 </template>
+
+<script>
+import SidebarLink from '@/components/SidebarLink.vue';
+import { collapsed, toggleSidebar, sidebarWidth } from './state';
+import { useAuthStore } from '@/stores/auth';
+
+export default {
+  props: {},
+  components: { SidebarLink },
+  setup() {
+    return { collapsed, toggleSidebar, sidebarWidth };
+  },
+  methods: {
+    handleLogout() {
+      if (window.confirm('Are you sure you want to log out?')) {
+        useAuthStore().logout();
+        this.$router.push('/');
+      } else {
+        this.$router.push('/dashboard');
+      }
+    },
+  },
+};
+</script>
 
 <style>
 :root {
