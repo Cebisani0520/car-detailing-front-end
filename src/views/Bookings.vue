@@ -1,7 +1,8 @@
 <template>
   <SideBar />
   <div class="container">
-    <h2>{{ currentMonthYear }}</h2>
+    <h1>Bookings</h1>
+    <h3>{{ currentMonthYear }}</h3>
     <div class="calendar">
       <div class="header">
         <button @click="previousMonth">&lt;</button>
